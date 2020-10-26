@@ -1,0 +1,41 @@
+html {
+  font-family: "Arial";
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body main {
+  max-width: 50%;
+  min-width: 320px;
+  padding: 2rem;
+}
+
+main form {
+  padding: 1rem;
+  background-color: gainsboro;
+}
+
+form label {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+form.has-error {
+  border: 1px solid red;
+  background-color: mistyrose;
+}
+
+label input {
+  float: right;
+}
+
+ul {
+  padding: 0;
+}
+
+ul > li {
+  margin-bottom: .5rem;
+}
