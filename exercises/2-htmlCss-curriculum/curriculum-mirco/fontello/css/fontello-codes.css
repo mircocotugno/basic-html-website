@@ -1,0 +1,7 @@
+
+.icon-home:before { content: '\e800'; } /* '' */
+.icon-language:before { content: '\e801'; } /* '' */
+.icon-phone:before { content: '\e802'; } /* '' */
+.icon-mail:before { content: '\e806'; } /* '' */
+.icon-mobile:before { content: '\e807'; } /* '' */
+.icon-calendar:before { content: '\e808'; } /* '' */
