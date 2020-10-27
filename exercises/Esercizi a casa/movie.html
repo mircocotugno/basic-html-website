@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
 <body>
     <main>
-        <h1>Movie</h1>
-        <h2>Elenco film visti</h2>
+        <div class="copertina">
+            <h1>Movie</h1>
+            <img class="image" src="data:image/png;base64,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" alt="pellicola film">
+            <h2>Elenco film visti</h2>
+        </div>
         <form id="viewedMovie">
             <label for="movie">Titolo film
                 <input type="text" name="movie">
-            </label>
+            </label><br>
             <label for="year">Anno di uscita
                 <input type="number" name="year">
-            </label>
+            </label><br>
             <label for="type">Categoria
                 <input type="text" name="type">
-            </label>
+            </label><br>
             <label for="rating">Valutazione
                 <input type="text" name="rating">
-            </label>
+            </label><br>
             <button onclick="addFilm()">Aggiungi film alla lista!</button>
         </form>
     </main>
