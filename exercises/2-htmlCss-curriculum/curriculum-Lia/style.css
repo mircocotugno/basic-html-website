@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap');
+@import "./fontello/css/fontello.css";
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    /* color: rebeccapurple; 
+    se lo metto nel body, poi non posso modificare i colori delle due column separatamente */
+}
+/* flex= flexbox 
+tecnologia che permette di gestire in modo dinamico le dimensioni e allineamenti dei blocchi
+se in generale metto display: block; o display: inline; (es i div che sono block-level, non seguono flusso testo)
+(immagine ecc, sono inline element e hanno di default la proprietà inline) */
+/* display flex: si riferisce ai figli, gestisce le colonne all'interno
+la applico sul padre (.container) ma in reale la vedo sui figli (column)
+definisce come padre deve comportarsi con i figli cioè gli elementi interni */
+.container {
+    display: flex;
+}
+
+.column {
+    width: 100%;
+    min-height: 300px;
+    margin: 5px;
+    position: relative;
+}
+
+/*.column.background-marble {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.5;  continuo a non riuscire a cambiare l'opacità 
+}*/
+
+/* width di tt le imm di una colonna sarà la largh della colonna in cui è inclusa */
+.column img { /* dubbio: perchè non ho una classe column img nell'html? è perchè sono una capra? */
+    width: inherit;
+   /* max-width: 200px;
+    margin-left: 10px;
+    margin-right: 10px; */ /* se scrivo così è per sganciarla e modificare le dimensioni */
+}
+
+.column.is-1 {
+    flex: 1 0;
+    background-color: lightsteelblue;
+} 
+
+.info p{ /* perchè se metto solo .info mi sparisce il padding? */
+    margin: 20px;
+    text-align: inline;
+    color: black;
+    font-weight: bold;
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: rgb(39, 88, 88);
+    text-decoration: underline;
+}
+
+a:active {
+    color: #536039;
+}
+
+.column.background-marble {
+    flex: 2 0;
+    color: rebeccapurple;
+    background-image: url(https://img.freepik.com/free-photo/white-marble-texture-background_42682-249.jpg?size=626&ext=jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* opacity: 0.5; sarò ciorda, ma non ho ancora capito come fare a cambiare solo l'opacità dell'immagine di sfondo */
+    /* min-height: inherit; può servire? Se voglio fare in modo che l'immagine di sfondo si applichi su tutta la pagina senza ripetersi in verticale, come posso fare? Inherit non funziona */
+}
+
+h2 {
+    text-transform: uppercase;
+    text-decoration: silver;
+    text-align: center;
+    margin-top: 50px;
+}
+
+p.title {
+    padding: 4px;
+}
+
+p.subtitle {
+    margin: 10px;
+}
+
+/* che modo posso usare in css per mettere più spazio fra br {
+    padding: 50px;
+}
+
+

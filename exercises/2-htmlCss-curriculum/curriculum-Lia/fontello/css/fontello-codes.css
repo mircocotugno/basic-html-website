@@ -1,0 +1,5 @@
+
+.i-phone:before { content: '\e800'; } /* '' */
+.i-mail:before { content: '\f0e0'; } /* '' */
+.i-birthday:before { content: '\f1fd'; } /* '' */
+.i-linkedin:before { content: '\f30c'; } /* '' */
