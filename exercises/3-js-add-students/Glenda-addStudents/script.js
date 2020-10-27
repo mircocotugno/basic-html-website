@@ -1,24 +1,21 @@
 function addNewStudent() {
   var inputs = document.getElementsByTagName("input")
+  /*creo una variabile input che contenga gli elementi di input che prelevo dall'altro file. Risulterà essere un array composto da tanti elementi quanti sono i miei input nel file */
   var student = {
       name: inputs.name.value, 
       surname: inputs.surname.value,
       age: inputs.age.value
   }
-  /* fino a qui funziona ma la pagina si ricarica subito quando clicco sul pulsante*/
-  console.log(student);
-
+  /*creo un oggetto student caratterizzato da 3 chiavi a cui associo a ciascuna un valore corrispondente ai vari indici dell'array input*/
+    console.log(student);
+    /*nella console voglio che mi stampi il valore che assume la variabile student in modo da verificare che il codice compili correttamente*/
   var form = document.getElementById("newStudentForm");
-  /*con var form gli dico di non comportarsi come di default in modo che non refreshi */
-  /*ho riempito la variabile form con l'id della form che ho in html */
-  form.addEventListener("click", function (event) {
+  /*creo una variabile form che prenda gli elementi tramite l'id newStudentForm presente nel file html*/
+  /*se aggiungessi una stampa sulla console vedrei che però ora la pagina si riaggiorna subito (comportamento di default della form). Ho quindi bisogno di stabilizzarla*/
+    form.addEventListener("click", function (event) {
+    /*gli dico di rimanere in allerta per quando sente cliccare */
     event.preventDefault();
+    /*gli dico di non comportarsi come fa normalmente e quindi che non deve riaggiornare subito la pagina */
   });
-  /*gli dico di rimanere in allerta per quando sente cliccare */
+  
 }
-/* abbiamo personalizzato il comportamento di default di una form. Ora quando apro in browser 
-e clicco sul punsante sulla console mi stampa la scritta Aggiungi Studente senza che si cancelli subito dopo.
-La stampa della scritta mi serve solo per verificare che il ciclo della funzione giri correttamente */
-
-/*sarebbe anche interessante stampare nella console quello che viene inserito nei vari campi
-quindi alla riga 2 del file js vado a modificare il contenuto delle parentesi sostituendo "Aggiungi studente" */
