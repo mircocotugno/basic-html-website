@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <script src="script.js"></script> <!--Per importare JS in HTML -->
 </head>
 <body>
   <main>
   <h1>Studenti</h1>
   <h2>Aggiungi un nuovo studente</h2>
-    <form id="newStudentForm">
-      <label for="name">Nome
-        <input type="text" name="name">
+    <form id="newStudentForm"> <!--Form: id mi serve perchè la voglio isolare -->
+      <label for="name">Nome <!--Attributo for per tag input --> <!--LABEL: inline level-->
+        <input type="text" name="name"> <!--Attributi name mi possono tornare utili in JS per pescare il campo input -->
       </label>
       <label for="surname">Cognome
         <input type="text" name="surname">
