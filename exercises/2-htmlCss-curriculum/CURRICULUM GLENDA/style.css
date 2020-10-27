@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;600;700&display=swap');
+/*Per le icone :https://fontello.com/*/
+@import './fontello/fontello-3d668f86/css/fontello.css';
+body {
+    margin: 10px;
+    font-family: 'Rajdhani', sans-serif;
+}
+/*con l'importazione del font da google e il fatto che su html ho lincato il file css vado a modificare tutte le successive scritte del body*/
+
+.container {
+    display:flex; /*modalità diversa della disposizione: ne inline, ne block*/
+/*lo applico sul padre "container" in modo che sappia di doverlo applicare sui figli "column"*/
+}
+
+.column {
+    width: 100%;
+    min-height: 300px;
+    margin: 5px;
+    background-color: lightslategrey;
+}
+
+/*vado ora ad impostare le colonne is-1 e is-2*/
+.column.is-1 {
+    flex: 1 0;
+}
+.column.is-2 {
+    flex: 2 0;
+}
+/*ho così creato le due colonne in cui una è il doppio dell'altra*/
+
+.column .photo {
+    /*width: inherit;*/
+    /*dico che tutte le immagini che ci sono dentro le classi "column" dovranno essere larghe quando la colonna*/
+    max-width:200px;
+    margin-top: 10px;
+    border: 8px double white;
+    /*ho deciso di ridimensionare la foto e mettere un bordo*/
+}
+
+/*vorrei mettere il nome affianco alla foto NON FUNZIONA*/ 
+.column .name {
+    text-align:center;
+}
+
+/*personalizzo dimensioni e margini per le varie scritte*/
+body * {
+    margin-top: 0;
+}
+h1 {
+    font-size: 3rem;
+    color: #151B54;
+}
+h2 {
+    font-size: 2rem;
+    color: #151B54;
+}
+h2.curriculum {
+    text-align: center;
+    font-size: 3rem;
+}
+h3 {
+    color: #151B54;
+}
+h1,
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.list {
+    text-transform: uppercase ;
+    font-size: 24px;
+    color: #151B54;
+}
+.where,
+.privacy {
+    font-style: italic;
+}
+.data {
+    padding: 20px;
+    border-bottom: 1px solid white;
+}
+
+/*DIIFERENZA TRA MARGIN E PADDING: Margin mi lavora sulle dimensioni della scatola su cui sto lavorando, Padding lavora sulle dimensioni del contenuto della scatola su cui sto lavorando*/
+
+.icon {
+    font-size: 20px;
+    color: #151B54; 
+    padding: 10px;
+}
