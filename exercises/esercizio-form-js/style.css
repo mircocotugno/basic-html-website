@@ -1,0 +1,14 @@
+html {
+    font-family: "Verdana";
+  }
+
+.title {
+    text-transform: uppercase;
+    height: 10rem;
+    width: 30rem;
+    background-color: rgb(255, 98, 87);
+}
+
+p {
+    font-size: large;
+}
