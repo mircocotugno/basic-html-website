@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!--importo i file per css e js-->
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
 </head>
@@ -11,8 +12,11 @@
   <main>
   <h1>Studenti</h1>
   <h2>Aggiungi un nuovo studente</h2>
+  <!--creo una forma composta da un serie di label e un button-->
     <form id="newStudentForm">
-      <label for="name">Nome
+      <!--ogni label ha un tag FOR-->
+      <label for="name">Nome <!--il testo lo metto subito perchè il tag label è inline-->
+        <!--è importante riportare il formato che mi aspetto in ingresso: stringa piuttosto che numero-->
         <input type="text" name="name">
       </label>
       <label for="surname">Cognome
@@ -21,6 +25,7 @@
       <label for="age">Età
         <input type="number" name="age">
       </label>
+      <!--con l'attributoo "on click" attivo una reazione per quando viene cliccato-->
       <button onclick="addStudent()">Aggiungi studente</button>
     </form>
     <div>
