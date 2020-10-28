@@ -52,8 +52,21 @@ function addNewStudent() {
 function addStudentToList(student) {
   var list= document.getElementById("studentList");
   var studentItem = document.createElement("li");
+  var removeButton = document.createElement("button");
+ 
+  removeButton.addEventListener("click", function() {removeStudentFromList(student)});
+/*qui sopra ho dovuto richiamare una funziona nuova e vuota al cui interno metto quella di rimozione per evitare che la esegua subito. Mettendo invece la funzione di contorno
+ quella all'intenro viene eseguita solo quando clicco il bottone di rimozione */
+  removeButton.appendChild(document.createTextNode("x"))
+  
+  studentItem.appendChild (removeButton);
   studentItem.appendChild(
     document.createTextNode(student.name + " " + student.surname + " - " + student.age)
   );
   list.appendChild(studentItem);
+}
+
+
+function removeStudentFromList(student) {
+  console.log(student);
 }
