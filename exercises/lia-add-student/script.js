@@ -14,12 +14,12 @@ var students = [
       name: "Lia",
       surname: "Maccapani",
       age: 21,
-    }
+    },
     {
       name: "Mirco",
       surname: "Cotugno",
       age: 34,
-      }
+      },
     {
       name: "Glenda",
       surname: "Rimondi",
@@ -63,9 +63,23 @@ function addNewStudent() {
 function addStudentToList(student) {
     var list = document.getElementById("studentList");
     var studentItem = document.createElement("li");
+    var removeButton = document.createElement("button");
+    removeButton.addEventListener("click", function() { removeStudentFromList(student) });
+    removeButton.appendChild(document.createTextNode("X"));
+
+    studentItem.appendChild(removeButton);
     studentItem.appendChild(
         document.createTextNode(student.name + " " + student.surname + " - " + student.age)
     );
+   /* studentItem.appendChild(document.createTextNode("X"));
+    studentItem.appendChild(removeButton);
+    studentItem.appendChild(
+            document.createTextNode(student.name + " " + student.surname + " - " + student.age)
+        ); */
     list.appendChild(studentItem);
+}
+
+function removeStudentFromList(student) {
+    console.log(student);
 }
  /* debugger;*/
