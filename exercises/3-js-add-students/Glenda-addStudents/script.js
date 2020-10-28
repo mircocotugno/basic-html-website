@@ -5,6 +5,14 @@ var students= [
     age: 21
   }
 ];
+
+window.onload = function() {
+  for(let student of students) {
+    addStudentToList(student);
+  }
+}
+/*per ogni elemento di students il ciclo for mi permette di fare quello che indico tra le graffe */
+
 /*creo una variabile student che sarà un array contentente diversi oggetti. In questo modo li potrò andare a stampare */
 /*parto già con un nome dentro */
 function addNewStudent() {
