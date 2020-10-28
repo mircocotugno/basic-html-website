@@ -13,9 +13,25 @@ var students = [
     {
       name: "Lia",
       surname: "Maccapani",
-      age: 21
+      age: 21,
+    }
+    {
+      name: "Mirco",
+      surname: "Cotugno",
+      age: 34,
+      }
+    {
+      name: "Glenda",
+      surname: "Rimondi",
+      age: 26,
     }
 ];
+
+window.onload = function () {
+    for (let student of students) { //console.log(student)
+        addStudentToList(student);
+    }
+}
 
 function addNewStudent() {
     var inputs = document.getElementsByTagName("input");
