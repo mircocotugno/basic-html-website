@@ -4,7 +4,23 @@ var students = [
     surname: "Pizzol",
     age: 21,
   },
+  {
+    name: "Stefano",
+    surname: "Cereser",
+    age: 25,
+  },
+  {
+    name: "Franco",
+    surname: "Casin",
+    age: 31,
+  },
 ];
+
+window.onload = function () {
+  for (let student of students) {
+    addStudentToList(student);
+  }
+}
 
 function addNewStudent() {
   var inputs = document.getElementsByTagName("input");
