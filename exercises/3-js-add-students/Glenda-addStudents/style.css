@@ -1,0 +1,37 @@
+html {
+    font-family: "Arial";
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+body main {
+    /*background-color: lawngreen;*/
+    max-width: 50%;
+    min-width: 320px;
+    padding: 2rem;
+}
+
+main form {
+    padding: 1rem;
+    background-color: silver; /*così coloro solo la form*/
+    border: 1px solid transparent;
+}
+
+form label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+label input {
+    float: right;
+}/*mi serve per allineare le caselle di input a destra*/
+
+main form.has-error {
+    background-color: mistyrose;
+    border-color: red;
+}
