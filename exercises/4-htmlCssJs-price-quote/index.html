@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="./script.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body>
     <!-- Intestazione pagina con logo -->
-
+    <header>
+      <h1>Preventivi Softwer GlendaLia</h1>
+      <p>
+        Completa le informazioni del modulo per ottenere facilmente un
+        preventivo personalizzato su misura per te.
+      </p>
+    </header>
     <!-- Form con i campi per realizzare un preventivo -->
-      <!-- Nome cliente => input text -->
-      <!-- Tipo di licenza => input select -->
-      <!-- Numero licenze => input range -->
-      <!-- Data di emissione => input date -->
-      <!-- Bottone per la creazione del preventivo -->
+    <main>
+      <form id="priceQuoteForm">
+        <h2>Compila il tuo preventivo qui:</h2>
+        <!-- Nome cliente => input text -->
+        <div class="form-field">
+          <label for="client"> Nome cliente </label>
+          <input type="text" name="client" />
+        </div>
+        <!-- Tipo di licenza => input select -->
+        <div class="form-field">
+          <label for="license"> Tipo di licenza </label>
+          <select name="license">
+            <option value="">Personale</option>
+            <option value="">Professionista</option>
+            <option value="">Azienda</option>
+          </select>
+        </div>
+        <!-- Numero licenze => input range -->
+        <div class="form-field">
+          <label for="number"> Numero licenze </label>
+          <input type="range" name="number" min="1" max="30" step="1"/>
+        </div>
+        <!-- Data di emissione => input date -->
+        <div class="form-field">
+          <label for="date"> Data immissione </label>
+          <input type="date" name="date"/>
+        </div>
+        <!-- Bottone per la creazione del preventivo -->
+        <button onclick="">Crea il tuo preventivo!</button>
+      </form>
+      <section>
+        <h2>Lista preventivi creati</h2>
+        <!-- Lista di preventivi creati -->
+        <div class="list-container">
+          <div class="list-header">
+            <!-- Informazioni della tabella -->
+          </div>
+          <div id="quoteList" class="list-body" >
+            <!-- Contenuto della tabella -->
+          </div>
+        </div>
+      </section>
+    </main>
 
-    <!-- Lista di preventivi creati -->
-</body>
+  </body>
 </html>
