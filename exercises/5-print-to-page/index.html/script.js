@@ -58,3 +58,33 @@ var books = [
 ];
 
 // inizia il tuo lavoro
+
+//creo il ciclo for che scorre il mio array di oggetti e per ogni oggetto richiamo la funzione di aggiunta del libro
+window.onload = function() {
+  for (let i=0; i<books.length; i++) {
+    addBook(books[i]);
+  };
+};
+
+//creo la funzione di agigunta del libro
+function addBook(x){
+  //creo la scatola più esterna e associo la classe
+  var box = document.createElement("div");
+  box.classList.add("list-element");
+  //creo il titolo, che corrisponde all'elemento title dell'oggetto
+  var name = document.createTextNode(x.title);
+  box.appendChild(name);
+  console.log(name);
+  //creo il paragrafo, inserisco la descrizione nel paragrafo e inserisco il tutto nel div
+  var summary = document.createElement("p");
+  summary.appendChild(document.createTextNode(x.description));
+  box.appendChild(summary);
+  console.log(summary)
+  //creo la lista che conterrà le 3 voci di autore, anno ed editore, aggiungo la lista nel div
+  var list = document.createElement("ul");
+  list.appendChild(document.createTextNode("Autore: " + x.author));
+  list.appendChild(document.createTextNode("Anno pubblicazione: " + x.year));
+  list.appendChild(document.createTextNode("Editore: " + x.editor));
+  box.appendChild(list);
+  console.log(list);
+};
