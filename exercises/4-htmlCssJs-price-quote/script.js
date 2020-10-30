@@ -42,7 +42,53 @@ window.onload = function () {
   }
 };
 // Estraggo le informazioni dalla form
+function createNewQuote() {
+  var form = document.getElementById("priceQuoteForm");
+  form.addEventListener("click", function (event) {
+    event.preventDefault();
+  });
+  var inputs = document.getElementsByClassName("field");
+  quoteData.client = inputs.client.value;
+  var licenseName;
+  var licensePrice;
+  switch (inputs.license.value) {
+    case "user":
+      licenseName = "Personale";
+      licensePrice = 50;
+      break;
+    case "pro":
+      licenseName = "Professionista";
+      licensePrice = 100;
+      break;
+    case "business":
+      licenseName = "Azienda";
+      licensePrice = 150;
+      break;
+    default: 
+    console.log("errore selezione licenza");
+    licenseName = "Non definito";
+    licensePrice = 0;
+      break;
+  }
+  quoteData.license = licenseName;
+  quoteData.number = inputs.number.value;
+  var startDate = new Date(inputs.date.value);
+  quoteData.date = startDate.toDateString();
+  quoteData.price = licensePrice * quoteData.number;
+  var year = startDate.getFullYear();
+  var month = startDate.getMonth();
+  var day = startDate.getDate();
+  var endDate = new Date(year + 1, month, day - 1);
+  quoteData.endLicense = endDate.toDateString();
+  console.log(quoteData);
+  addQuote(quoteData);
+}
 
+function updateNumber() {
+  var inputRange = document.getElementsByName("number");
+  var showNumber = document.getElementById("licenseNumber");
+  showNumber.innerHTML = inputRange[0].value;
+}
 // Verifico la correttezza dei campi
 
 // Compongo i dati del preventivo

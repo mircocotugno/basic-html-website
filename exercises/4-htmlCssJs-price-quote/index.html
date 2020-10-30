@@ -23,29 +23,30 @@
         <!-- Nome cliente => input text -->
         <div class="form-field">
           <label for="client"> Nome cliente </label>
-          <input type="text" name="client" />
+          <input class="field" type="text" name="client" />
         </div>
         <!-- Tipo di licenza => input select -->
         <div class="form-field">
           <label for="license"> Tipo di licenza </label>
-          <select name="license">
-            <option value="">Personale</option>
-            <option value="">Professionista</option>
-            <option value="">Azienda</option>
+          <select class="field" name="license">
+            <option value="user">Personale</option>
+            <option value="pro">Professionista</option>
+            <option value="business">Azienda</option>
           </select>
         </div>
         <!-- Numero licenze => input range -->
         <div class="form-field">
           <label for="number"> Numero licenze </label>
-          <input type="range" name="number" min="1" max="30" step="1"/>
+          <input class="field" type="range" onchange="updateNumber()" name="number" min="1" max="30" step="1"/>
+          <span id="licenseNumber"></span>
         </div>
         <!-- Data di emissione => input date -->
         <div class="form-field">
           <label for="date"> Data immissione </label>
-          <input type="date" name="date"/>
+          <input class="field" type="date" name="date"/>
         </div>
         <!-- Bottone per la creazione del preventivo -->
-        <button onclick="">Crea il tuo preventivo!</button>
+        <button onclick="createNewQuote()">Crea il tuo preventivo!</button>
       </form>
       <section>
         <h2>Lista preventivi creati</h2>
