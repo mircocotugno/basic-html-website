@@ -12,3 +12,8 @@ html {
   max-width: 300px;
   margin: 20px;
 }
+
+.list-element ul {
+  list-style: none;
+  padding: 0;
+}
