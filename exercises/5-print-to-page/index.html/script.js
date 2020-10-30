@@ -59,40 +59,41 @@ var books = [
 
 // inizia il tuo lavoro
 window.onload = function() {
-  for (let book of books) {
-    console.log(book);
-    addNewBook(book);
+  for (let bookData of books) {
+    console.log(bookData);
+    addNewBook(bookData);
   }
 };
 //creo funzione che mi permetta di aggiungere un libro e stamparlo nella lista
 //all'interno della funzione struttuto in JS i div, l'ul e i li dell'HTML
 function addNewBook(book) {
+  // Nel corpo della funzione ricordati ti usare l'argomento "book" che rappresenta le informazioni necessarie al completamento della funzione "addNewBook"
   var newBook = document.createElement("div");
   newBook.classList.add("list-element");
 
   var bookTitle = document.createElement("h4"); //creo titolo
-  bookTitle.appendChild(document.createTextNode(books.title)); //lo stampo
+  bookTitle.appendChild(document.createTextNode(book.title || "Titolo non torvato")); //lo stampo
   newBook.appendChild(bookTitle); //do a div new book figlio bookTitle
 
   var bookDescription = document.createElement("p");
-  bookDescription.appendChild(document.createTextNode(books.description));
+  bookDescription.appendChild(document.createTextNode(book.description  || "Descrizzione non torvato"));
   newBook.appendChild(bookDescription);
-  debugger;
 
   var bookInfo = document.createElement("ul");
-  newBook.appendChild(bookDescription);
 
   var bookAuthor = document.createElement("li");
-  bookAuthor.appendChild(createTextNode(books.author));
+  bookAuthor.appendChild(document.createTextNode(book.author));
   bookInfo.appendChild(bookAuthor);
 
   var bookYear = document.createElement("li");
-  bookYear.appendChild(createTextNode(books.year));
+  bookYear.appendChild(document.createTextNode(book.year));
   bookInfo.appendChild(bookYear);
 
   var bookEditor = document.createElement("li");
-  bookEditor.appendChild(createTextNode(books.editor));
+  bookEditor.appendChild(document.createTextNode(book.editor));
   bookInfo.appendChild(bookEditor);
+
+  newBook.appendChild(bookInfo);
 
   console.log(newBook);
   var bookList = document.getElementById("bookList");
